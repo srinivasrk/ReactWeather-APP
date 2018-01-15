@@ -2,7 +2,7 @@ var express = require('express');
 const cors = require('cors');
 // Create our app
 var app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const path = require('path')
 
 app.use('/public',function(req, res, next) {
@@ -22,6 +22,6 @@ app.use('/public',function(req, res, next) {
  */
 app.use('/', express.static('public'));
 
-app.listen(port, function () {
-  console.log('Express server is up on port ' + port);
+app.listen(PORT, function () {
+  console.log('Express server is up on port ' + PORT);
 });
