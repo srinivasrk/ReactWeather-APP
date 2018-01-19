@@ -10,6 +10,9 @@ var Examples = require('Examples');
 //Load foundation
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 require('style-loader!css-loader!foundation-sites/dist/css/foundation-float.min.css');
+
+//app css
+require('style!css!sass!applicationStyles');
 $(document).foundation();
 
 // var obj = {

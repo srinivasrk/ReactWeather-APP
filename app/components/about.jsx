@@ -14,9 +14,9 @@ var React = require('react');
 var About = (props) => {
   return(
     <div className="row">
-      <h3 className="small-12 text-center"> About</h3>
-      <p className = "small-12  text-center"> Built using React, jQuery& Foundation</p>
-      <p className = "small-12  text-center">
+      <h1 className=" text-center page-title"> About</h1>
+      <p className = "text-center"> Built using React, jQuery& Foundation</p>
+      <p className = "text-center">
         <a  target="_blank" href="https://www.linkedin.com/in/srini-cincy/"> My linkedin profile</a>
       </p>
     </div>
