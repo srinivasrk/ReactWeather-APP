@@ -9,13 +9,13 @@ module.exports = {
     console.log(requestUrl);
     return axios.get(requestUrl).then(function(res){
       debugger;
-      if(res.data.cod && res.data.message){
-        throw new Error(res.data.message);
+      if(res.data.cod !== 200){
+        throw new Error(res.data.cod);
       } else{
         return res.data.main.temp;
       }
-    }, function(res){
-      throw new Error("incorrect data" + res.data.message);
+    },  res => {
+            throw (res && ((res.response && res.response.data && (res.response.data.message || res.response.data)) || (res.code))) || res;
     });
     }
 }
